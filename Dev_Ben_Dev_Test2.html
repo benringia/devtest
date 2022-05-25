@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get An Intervention</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site-atf">
+      <div class="hero-backgrounds">
+        <img class="gray-img" src="./assets/images/Rectangle 2.1.png" alt="" />
+        <img class="white-img" src="./assets/images/Rectangle 2.png" alt="" />
+      </div>
+
+      <header>
+        <div class="site-container">
+          <div class="header-group">
+            <div class="header-icon">
+              <img class="" src="./assets/icons/site-branding.svg" alt="" />
+            </div>
+            <div class="l-site-header-menu">
+              <a class="c-site-menu" href="javascript:void(0)"
+                ><span class="c-site-menu-box"
+                  ><span class="c-site-menu-inner"></span></span
+              ></a>
+            </div>
+            <!-- End - menu -->
+            <div class="header-menu">
+              <ul>
+                <li class="active"><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="" class="last">CONTACT</a></li>
+              </ul>
+              <p>CALL NOW FOR A CONSULT <span>XXX.XXX.XXXX</span></p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-container">
+        <div class="atf-group">
+          <div class="atf-details">
+            <h2><span>GET AN</span><br />INTERVENTION</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation.
+            </p>
+          </div>
+
+          <div class="atf-form">
+            <h3>Contact Us</h3>
+            <div class="row">
+              <form class="col s12">
+                <div class="row input-group">
+                  <div class="input-field input-text col s6">
+                    <input id="first_name" type="text" class="validate" />
+                    <label for="first_name">First Name</label>
+                  </div>
+                  <div class="input-field input-text col s6">
+                    <input id="last_name" type="text" class="validate" />
+                    <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+
+                <div class="row input-group">
+                  <div class="input-field input-text col s6">
+                    <input id="email" type="email" class="validate" />
+                    <label for="email">Business Email</label>
+                  </div>
+                  <div class="input-field input-text col s6">
+                    <input id="company" type="text" class="validate" />
+                    <label for="company">Company</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field input-select col s12">
+                    <select class="browser-default">
+                      <option value="" disabled selected>Australia</option>
+                      <option value="1">Philippines</option>
+                      <option value="2">Malaysia</option>
+                      <option value="3">China</option>
+                      <option value="4">Japan</option>
+                      <option value="5">Singapore</option>
+                      <option value="6">US</option>
+                    </select>
+                    <label for="country">Country</label>
+                  </div>
+                </div>
+
+                <div class="row submit-row">
+                  <a href="">Submit</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="site-main"></main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/app.js"></script>
+
+    <script>
+        $('.c-site-menu').click(() => {
+          $('.c-site-menu').toggleClass('js-active')
+        })
+    </script>
+  </body>
+</html>
