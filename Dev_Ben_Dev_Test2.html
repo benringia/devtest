@@ -75,7 +75,25 @@
       <div class="site-container">
         <div class="atf-group">
           <div class="atf-details">
-            <h2><span>GET AN</span><br />INTERVENTION</h2>
+            <h2>
+              <picture>
+                <source
+                  media="(min-width: 992px)"
+                  srcset="./assets/images/atf-title-desktop.svg"
+                />
+                <source
+                  media="(max-width: 992px)"
+                  srcset="./assets/images/atf-title-tablet.svg"
+                />
+                
+                <img
+                  src="./assets/images/atf-title-desktop.svg"
+                  alt=""
+                  style="width: 100%"
+                />
+              </picture>
+
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -124,7 +142,7 @@
                 </div>
 
                 <div class="row submit-row">
-                  <a href="">Submit</a>
+                  <a href="javascript:void(0)">Submit</a>
                 </div>
               </form>
             </div>
@@ -193,7 +211,7 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation.
               </p>
-              <a href="" class="btn-item"
+              <a href="javascript:void(0)" class="btn-item"
                 >92% Success Rate
                 <svg
                   width="17"
@@ -344,8 +362,64 @@
             </div>
           </section>
         </div>
+
+        
+          <section class="video-section">
+            <div class="video-group">
+              <div class="video-desc">
+               
+                <h4>
+                  <picture>
+                    <source
+                      media="(min-width: 992px)"
+                      srcset="./assets/images/watch-the-video.svg"
+                    />
+                    <source
+                      media="(max-width: 576px)"
+                      srcset="./assets/images/watch-the-video-mob.svg"
+                    />
+                    
+                    <img
+                      src="./assets/images/watch-the-video.svg"
+                      alt=""
+                      style="width: auto"
+                    />
+                  </picture>
+                </h4>
+
+                <div class="img-bg">
+                  <img src="./assets/images/video-sect-bg.jpg" alt="">
+                </div>
+              </div>
+              <div class="video-player">
+                <div class="video-cont">
+                  <video src="./assets/images/big_buck_bunny_720p_1mb.mp4" class="video"></video>
+                </div>
+                
+
+                <div class="player-control">
+                  <button class="play-button" title="Play"><svg width="31" height="36" viewBox="0 0 31 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29.1234 15.1493C31.2086 16.3532 31.2086 19.3629 29.1234 20.5668L4.78475 34.6187C2.69953 35.8226 0.0930175 34.3177 0.0930176 31.9099L0.0930188 3.80613C0.0930189 1.39833 2.69954 -0.106538 4.78475 1.09736L29.1234 15.1493Z" fill="white"/>
+                    </svg>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        
       </div>
     </main>
+
+    <footer>
+      <div class="footer-group">
+        <p>@2019 Get an Intervention Inc. All rights reserved.</p>
+        <ul>
+          <li><a href="">Privacy Policy</a></li>
+          <li class="pad-lr-10"><a href="">Terms of use</a></li>
+          <li><a href="">Site Map</a></li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
