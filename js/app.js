@@ -10,3 +10,5 @@ document.querySelector('.white-img').setAttribute('draggable','false')
 
 
 
+
+
