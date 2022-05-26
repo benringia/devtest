@@ -16,8 +16,15 @@
   -ms-touch-action: pan-Y;
   touch-action: manipulation;
   -moz-backface-visibility: hidden;
+  
   /* fix firefox animation glitch */
 }
+
+/* @media (max-width: 576px) {
+  .carousel .owl-stage {
+    overflow-y: visible;
+  }
+} */
 
 .carousel .owl-stage:after {
   content: ".";
@@ -30,7 +37,7 @@
 
 .carousel .owl-stage-outer {
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
 }
@@ -82,6 +89,7 @@
   border: none;
   padding: 0 !important;
   font: inherit;
+  background: transparent;
 }
 
 .carousel.owl-loaded {
@@ -107,9 +115,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow: hidden;
+  overflow: visible !important;
   border-radius: 7px;
+  
 }
+
+/* .carousel.owl-drag .owl-item.active {
+  display: block !important;
+} */
 
 .carousel.owl-grab {
   cursor: move;
