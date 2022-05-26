@@ -184,6 +184,7 @@ header {
                     font-size: 1rem;
                     text-align: center;
                     text-decoration: none;
+                    z-index: 2;
 
                   
                     
@@ -266,7 +267,14 @@ header {
 
                 @media (max-width: 576px) {
                     & {
-                       display: none;
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        top: 82px;
+                        z-index: 2;
+                        background: #1d4f43;
+                        padding: 16px 16px 36px 16px;
                     }
                 }
     
@@ -276,12 +284,19 @@ header {
                     margin-right: 31px;
                     width: 260px;
     
-                    @media (max-width: 992px) {
-                        & {
-                            margin-right: 0;
-                            justify-content: flex-end;
-                            margin-bottom: 20px;
-                            padding-top: 7px;
+                        @media (max-width: 992px) {
+                            & {
+                                margin-right: 0;
+                                justify-content: flex-end;
+                                margin-bottom: 20px;
+                                padding-top: 7px;
+                            }
+
+                        @media (max-width: 576px) {
+                            & {
+                                width: 100%;
+                                flex-direction: column;
+                            }
                         }
                     }
     
@@ -300,37 +315,68 @@ header {
                             }
                         }
                     }
-                }
-    
-    
-                .active {
-                    a {
-                        font-weight: $font-bold;
-                        color: $menu-hover-clr;
-                        text-decoration: underline;
-                    }
-                }
-                
-                a {
-    
-                    
-                    font-size: $font-size;
-                    font-weight: 400;
-                    color: $menu-text-clr;
-                    padding-right: 31px;
-    
-                    @media(max-width: 992px) {
-                        &.last {
-                            padding-right: 0;
+
+
+                    @media (max-width: 576px) {
+                        li {
+                            border-bottom: 1px solid #ffffff61;
+                            
                         }
                     }
-    
-                    &:hover {
-                        color: $menu-hover-clr;
-                        font-weight: $font-bold;
-                        text-decoration: underline;
+
+
+                    .active {
+                        a {
+                            font-weight: $font-bold;
+                            color: $menu-hover-clr;
+                            text-decoration: underline;
+
+                                @media (max-width: 576px) {
+                                    & {
+                                        text-decoration: none;
+                                       
+                                    }
+                                }
+                        }
                     }
+                    
+                    a {
+                        font-size: $font-size;
+                        font-weight: 400;
+                        color: $menu-text-clr;
+                        padding-right: 31px;
+        
+                        @media(max-width: 992px) {
+                            &.last {
+                                padding-right: 0;
+                            }
+                        }
+
+                        @media (max-width: 576px) {
+                            & {
+                                display: block;
+                                padding: 12px 0;
+                            }
+                        }
+        
+                        &:hover {
+                            color: $menu-hover-clr;
+                            font-weight: $font-bold;
+                            text-decoration: underline;
+
+                            @media (max-width: 576px) {
+                                & {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+
+                   
                 }
+    
+    
+              
     
                 p {
                     font-weight: $font-bold;
@@ -339,6 +385,13 @@ header {
                     text-align: right;
                     span {
                         color: $highlight-clr;
+                    }
+
+                    @media (max-width: 576px) {
+                        & {
+                            text-align: center;
+                            padding-top: 16px;
+                        }
                     }
                 }
             }
@@ -662,6 +715,164 @@ header {
         }
 }
 
+/*==============================================================
+        MAIN
+=============================================================*/
+
+
 .site-main {
     background-color: #f5f5f5;
+    height: 2000px;
+
+
+    section {
+        padding: 24px;
+    }
+
+
+
+    .wu-photo-group {
+        display: flex;
+        margin: 64px 0;
+        justify-content: space-between;
+        gap: 36px;
+
+
+
+        @media (max-width: 992px) {
+                & {
+                    gap: 24px;
+                }
+        }
+
+            @media (max-width: 768px) {
+                & {
+                    margin:  0 0 64px 0;
+                }
+        }
+
+            @media (max-width: 576px) {
+                & {
+                   display: none;
+                }
+        }
+
+      
+
+
+        .wu-photo-item {
+            
+            img {
+                border-radius: 8px;
+                width: 100%;
+            }
+        }
+    }
+
+
+    .wu-icon-group {
+        position: relative;
+        display: flex;
+        margin-bottom: 32px;
+
+
+
+        &::after {
+            content: '';
+            border: 1px solid #EAEAEA;
+            height: 2px;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 40%;
+            z-index: 0;
+            
+        }
+
+        picture {
+            z-index: 1;
+            background: #f5f5f5;
+            padding-right: 27px;
+        }
+
+           
+    }
+
+    .wu-para-group {
+        display: flex;
+        gap: 36px;
+
+            @media (max-width: 992px) {
+                & {
+                    gap: 24px;
+                }
+            }
+
+            @media (max-width: 500px) {
+                & {
+                    flex-direction: column;
+                    gap: 16px;
+                }
+            }
+
+        .wu-para-item {
+            width: 100%;
+            flex: 0 0 31%;
+
+            @media (max-width: 768px) {
+                & {
+                    flex: 0 0 50%;
+                }
+
+                &.hidden-md {
+                    display: none;
+                } 
+            }
+
+            @media (max-width: 500px) {
+                & {
+                    flex: 0 0 100%;
+                }
+            }
+           
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                color: $main-text-color;
+
+            }
+
+            .btn-item {
+                display: flex;
+                width: 100%;
+                border: 2px solid $highlight-clr;
+                border-radius: 4px;
+                color: $highlight-clr;
+                background-color: #f5f5f5;
+                margin-top: 10px;
+                height: 52px;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+                justify-content: center;
+                align-items: center;
+
+                @media (max-width: 500px) {
+                    & {
+                        margin-top: 24px;
+                    }
+                }
+
+                    svg {
+                        margin-left: 8px;
+                    }
+            }
+        }
+
+
+    }
 }
