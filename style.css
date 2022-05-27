@@ -368,11 +368,6 @@ header .header-group .header-menu p span {
     line-height: 44px;
   }
 }
-.atf-group .atf-details span {
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  -webkit-text-stroke: 1px #ffffff;
-}
 .atf-group .atf-details p {
   font-family: Montserrat;
   font-size: 18px;
@@ -970,8 +965,45 @@ header .header-group .header-menu p span {
   right: 10%;
   display: none;
 }
-.site-main .buttons-section .button-group .button-row a:hover .tooltip, .site-main .buttons-section .button-group .button-row a:hover::after {
+@media (max-width: 1220px) {
+  .site-main .buttons-section .button-group .button-row a:after {
+    top: 7%;
+    right: 3%;
+  }
+}
+@media (max-width: 992px) {
+  .site-main .buttons-section .button-group .button-row a:after {
+    top: 2%;
+    right: 3%;
+  }
+}
+@media (max-width: 768px) {
+  .site-main .buttons-section .button-group .button-row a:after {
+    top: 14%;
+    right: 4%;
+  }
+}
+@media (max-width: 576px) {
+  .site-main .buttons-section .button-group .button-row a:after {
+    top: 36%;
+    right: 10%;
+  }
+}
+@media (max-width: 415px) {
+  .site-main .buttons-section .button-group .button-row a:after {
+    right: 3%;
+  }
+}
+.site-main .buttons-section .button-group .button-row a:hover .tooltip {
   display: block;
+}
+.site-main .buttons-section .button-group .button-row a:hover::after {
+  display: block;
+}
+@media (max-width: 768px) {
+  .site-main .buttons-section .button-group .button-row a:hover::after {
+    display: block;
+  }
 }
 .site-main .buttons-section .button-group .button-row .tooltip {
   font-size: 13px;

@@ -469,24 +469,7 @@ header {
                 }
             }
 
-            span {
-                -webkit-text-fill-color: transparent;
-                color: transparent;
-                -webkit-text-stroke: 1px #ffffff;
-                
-                // text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
-                // -1px 1px 0 #fff, 1px 1px 0 #fff;
-
-                // &::after {
-                //     content: attr(data-text);
-                //     color: white;
-                //     position: absolute;
-                //     top: 0px;
-                //     left: 0px;
-                //     -webkit-text-stroke: 0px #000;
-                //   }
-            }
-
+           
             p {
                 font-family: Montserrat;
                 font-size: 18px;
@@ -1232,12 +1215,63 @@ header {
                         top: 37%;
                         right: 10%;
                         display: none;
+
+                        @media (max-width: 1220px) {
+                            top: 7%;
+                            right:3%;
+
+                        }
+
+                        @media (max-width: 992px) {
+                            top: 2%;
+                            right:3%;
+
+                        }
+
+                        @media (max-width: 768px) {
+                            top: 14%;
+                            right: 4%; 
+                        }
+
+                        @media (max-width: 576px) {
+                            top: 36%;
+                            right: 10%;
+                        }
+
+                        @media (max-width: 415px) {
+                            right: 3%;
+                        }
                   }
 
-                
-                    &:hover .tooltip, &:hover::after {
+                  
+                    &:hover .tooltip {
                         display: block;
                     }
+
+                    &:hover::after {
+                        display: block;
+                    }
+
+                        // @media (min-width: 992px) {
+                        //     &:hover::after {
+                        //         display: block;
+                        //     }
+                        // }
+
+                        // @media (max-width: 992px) {
+                        //     &:hover::after {
+                        //         display: none;
+                        //     }
+                        // }
+
+                        @media (max-width: 768px) {
+                            &:hover::after {
+                                display: block;
+                            }
+                        }
+                   
+
+                   
 
                 }
 
